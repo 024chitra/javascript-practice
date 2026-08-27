@@ -118,4 +118,16 @@ selectColor.addEventListener("change", () => {
   }
 });
 
-//13
+//14
+const hover = document.querySelector("#hover");
+
+hover.addEventListener("mouseover", () => {
+  hover.style.backgroundColor = "yellow";
+});
+
+//15
+const input = document.querySelector("body");
+const press = document.querySelector("#press");
+input.addEventListener("keyup", (event) => {
+  press.textContent = event.key;
+});

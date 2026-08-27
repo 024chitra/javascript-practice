@@ -23,6 +23,12 @@
       color: white;
       background-color: chocolate;
     }
+    #paragraph{
+      margin: 12px;
+      padding: 12px;
+      border: 2px solid ;
+      border-radius: 5px;
+    }
   </style>
   <body>
     <button id="button1">Click here</button>
@@ -39,8 +45,15 @@
     <button id="stopBtn">Stop counting</button>
     <button id="continueBtn">Continue counting</button>
     <button id="resetBtn">reset</button>
-    
-
+    <input id="inputText" type="text" placeholder="type here">
+    <p id="paragraph"> your paragraph</p>
+    <select name="color" id="selectColor">
+      <option value="select color" disabled selected>select color</option>
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+    </select>
+    <p id="selectedColor">color selected</p>
     <script src="events.js"></script>
   </body>
 </html>

@@ -90,7 +90,32 @@ reset.addEventListener("click", () => {
 });
 
 //9
-//use a function instead of writing the code on 
+//use a function instead of writing the code on
 
 //10
 // solved in Q8
+
+//11
+const inputText = document.querySelector("#inputText");
+const displayPara = document.querySelector("#paragraph");
+
+inputText.addEventListener("input", () => {
+  displayPara.textContent = inputText.value;
+});
+
+//12
+const selectColor = document.querySelector("#selectColor");
+const selected = document.querySelector("#selectedColor");
+
+selectColor.addEventListener("change", () => {
+  let color = selectColor.value;
+  if (color === "red") {
+    selected.style.backgroundColor = "red";
+  } else if (color === "green") {
+    selected.style.backgroundColor = "green";
+  } else if (color === "blue") {
+    selected.style.backgroundColor = "blue";
+  }
+});
+
+//13

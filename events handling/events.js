@@ -131,3 +131,51 @@ const press = document.querySelector("#press");
 input.addEventListener("keyup", (event) => {
   press.textContent = event.key;
 });
+
+//16
+const lastKey = document.querySelector("#lastKey");
+const countChar = document.querySelector("#character");
+mouseHover = document.querySelector("#Q16");
+
+input.addEventListener("keyup", (event) => {
+  lastKey.textContent = event.key;
+});
+
+let countC = 0;
+input.addEventListener("keyup", function () {
+  countC++;
+  countChar.textContent = countC;
+});
+
+mouseHover.addEventListener("mouseover", function () {
+  mouseHover.style.border = "4px solid red";
+});
+
+//17
+const buttonQ17 = document.querySelector("#buttonQ17");
+buttonQ17.addEventListener("click", (event) => {
+  console.log(event);
+});
+
+//18
+let buttonQ18 = document.querySelectorAll("#buttonQ18");
+let output = document.querySelector("#output");
+
+buttonQ18.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    output.textContent = event.target.textContent;
+  });
+});
+
+//19
+let button19 = document.querySelector("#button19");
+
+button19.addEventListener("click", (event) => {
+  console.log(event.type);
+});
+button19.addEventListener("mouseover", (event) => {
+  console.log(event.type);
+});
+
+//20
+// solve in q13

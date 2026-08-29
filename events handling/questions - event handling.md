@@ -72,11 +72,11 @@
 17. **Explore the event object.**
     Add a click listener to a button and print the event object to the console.
 
-18. **Use `event.target`.**
-    Create three buttons. When any button is clicked, display the text of the clicked button using `event.target`.
+18. **Use `event.target`**
+    Create three buttons. When any button is clicked, display the text of the clicked button using `event.target`
 
-19. **Use `event.type`.**
-    Create a button with both `click` and `mouseover` listeners. Display which event occurred using `event.type`.
+19. **Use `event.type`**
+    Create a button with both `click` and `mouseover` listeners. Display which event occurred using `event.type`
 
 20. **Use `event.preventDefault()`.**
     Create a form and prevent it from submitting/reloading the page using `event.preventDefault()`.
@@ -128,7 +128,7 @@
     event.stopPropagation();
     ```
 
-27. **Understand `event.target` vs `event.currentTarget`.**
+27. **Understand `event.target` vs `event.currentTarget`**
     Create nested elements with click listeners and determine the difference between:
 
     ```js
@@ -204,7 +204,7 @@
 
     Use event delegation to handle both buttons.
 
-36. **Event delegation with `event.target`.**
+36. **Event delegation with `event.target`**
     Create a list where clicking an item changes its background. Handle all items using one listener on the parent.
 
 37. **Event delegation with nested elements.**

@@ -179,3 +179,13 @@ button19.addEventListener("mouseover", (event) => {
 
 //20
 // solve in q13
+
+//21
+const link = document.querySelector("#link");
+const linkOut = document.querySelector("#linkOutput");
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  linkOut.textContent = "Navigation Prevented";
+});
+
+//22

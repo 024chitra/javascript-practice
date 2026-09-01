@@ -291,14 +291,82 @@ const grandparent30 = document.querySelector("#grandparent30");
 const parent30 = document.querySelector("#parent30");
 const child30 = document.querySelector("#child30");
 
-grandparent30.addEventListener("click", () => {
+grandparent30.addEventListener(
+  "click",
+  () => {
     console.log("Grandparent - Capturing");
-}, true);
+  },
+  true,
+);
 
-parent30.addEventListener("click", () => {
+parent30.addEventListener(
+  "click",
+  () => {
     console.log("Section - Capturing");
-}, true);
+  },
+  true,
+);
 
 child30.addEventListener("click", () => {
-    console.log("Button - Target");
+  console.log("Button - Target");
+});
+
+//31
+const grandparent31 = document.querySelector("#grandparent31");
+const parent31 = document.querySelector("#parent31");
+const child31 = document.querySelector("#child31");
+
+grandparent31.addEventListener(
+  "click",
+  () => {
+    console.log("Grandparent - Capturing");
+  },
+  true,
+);
+
+parent31.addEventListener(
+  "click",
+  (event) => {
+    console.log("Parent - Capturing");
+
+    event.stopPropagation();
+  },
+  true,
+);
+
+child31.addEventListener("click", () => {
+  console.log("Child - Target");
+});
+
+//32
+const list = document.querySelector("#list");
+const clickedItem = document.querySelector("#clickedItem");
+
+list.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    clickedItem.textContent = event.target.textContent;
+  }
+});
+
+//33 
+const addBtn = document.querySelector("#addBtn");
+const list33 = document.querySelector("#list33");
+
+let itemNumber = 1;
+
+addBtn.addEventListener("click", () => {
+    const li = document.createElement("li");
+
+    li.textContent = `Item ${itemNumber}`;
+    itemNumber++;
+
+    list33.appendChild(li);
+});
+
+//34
+const list34 = document.querySelector("#list34")
+list34.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete")) {
+        event.target.parentElement.remove();
+    }
 });

@@ -188,5 +188,32 @@ link.addEventListener("click", (event) => {
   linkOut.textContent = "Navigation Prevented";
 });
 
-//23
+//24 both parent and child get clicked
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+
+parent.addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+child.addEventListener("click", () => {
+  console.log("Child clicked");
+});
+
+//25 child => parent => grandparent
+const grandparent = document.querySelector("#grandparent");
+const parent2 = document.querySelector("#parent2");
+const child2 = document.querySelector("#child2");
+
+grandparent.addEventListener("click", () => {
+  console.log("Grandparent");
+});
+
+parent2.addEventListener("click", () => {
+  console.log("Parent");
+});
+
+child2.addEventListener("click", () => {
+  console.log("Child");
+});
 

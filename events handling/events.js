@@ -217,3 +217,88 @@ child2.addEventListener("click", () => {
   console.log("Child");
 });
 
+//26 now only child will get click
+parent2.addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+child2.addEventListener("click", (event) => {
+  event.stopPropagation(); //important
+
+  console.log("Child clicked");
+});
+
+//27
+const parent3 = document.querySelector("#parent3");
+const child3 = document.querySelector("#child3");
+
+parent3.addEventListener("click", (event) => {
+  console.log("Target:", event.target);
+  console.log("Current Target:", event.currentTarget);
+});
+
+child3.addEventListener("click", (event) => {
+  console.log("Child target:", event.target);
+  console.log("Child current target:", event.currentTarget);
+});
+
+//28
+const parent4 = document.querySelector("#parent4");
+const child4 = document.querySelector("#child4");
+
+parent4.addEventListener(
+  "click",
+  () => {
+    console.log("Parent");
+  },
+  true,
+);
+
+child4.addEventListener(
+  "click",
+  () => {
+    console.log("Child");
+  },
+  true,
+);
+
+//29
+const parent5 = document.querySelector("#parent5");
+const child5 = document.querySelector("#child5");
+
+parent5.addEventListener(
+  "click",
+  () => {
+    console.log("Parent - Capturing");
+  },
+  true,
+);
+
+parent5.addEventListener(
+  "click",
+  () => {
+    console.log("Parent - Bubbling");
+  },
+  false,
+);
+
+child5.addEventListener("click", () => {
+  console.log("Child");
+});
+
+//30
+const grandparent30 = document.querySelector("#grandparent30");
+const parent30 = document.querySelector("#parent30");
+const child30 = document.querySelector("#child30");
+
+grandparent30.addEventListener("click", () => {
+    console.log("Grandparent - Capturing");
+}, true);
+
+parent30.addEventListener("click", () => {
+    console.log("Section - Capturing");
+}, true);
+
+child30.addEventListener("click", () => {
+    console.log("Button - Target");
+});
